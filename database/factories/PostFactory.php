@@ -17,7 +17,9 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => fake()->sentence(rand(8, 12), true),
+            'content' => fake()->sentences(rand(1, 4), true),
+            'image' => fake()->imageUrl(200, 200)
         ];
     }
 }
